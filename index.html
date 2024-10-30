@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Inter&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="styles.css">
+	<title>Game</title>
+</head>
+<body>
+<header>
+	<div class="main-wrapper">
+		<h1 class="main-title">Welcome to the game Tic Tac Toe</h1>
+	</div>
+</header>
+<main>
+	<div class="overlay">
+		<div class="overlay-text">Press Enter to start</div>
+	</div>
+	<div id="modalRules" class="modal hidden-rules">
+		<div class="rules-content">
+			<h2 class="rules-title">Game Rules</h2>
+			<p class="rules content">Here are the rules of the game.</p>
+			<p class="rules content">To close this window and start playing, click <span id="close-rules" class="rules-ok">"OK"</span>
+			</p>
+			<p class="rules">1. Game for two players!!!</p>
+			<p class="rules">2. Player names must be entered in English!!!</p>
+			<p class="rules">3. The game lasts until three wins!!!</p>
+		</div>
+	</div>
+	<div class="name-input" id="nameInputContainer" style="display: none;">
+		<label id="namePrompt"></label>
+		<input class="input" type="text" id="playerName" placeholder="Enter player name">
+		<button class="submit" id="submitName">Ok!</button>
+		<button class="cancel" id="cancelName">No!</button>
+	</div>
+	<div class="score-wrapper">
+		<div class="x-y">
+			<div class="xy-xy">
+				<p class="score-namesX">X-</p>
+				<div class="score-x">0</div>
+			</div>
+			<div class="xy-xy">
+				<p class="score-namesO">O-</p>
+				<div class="score-y">0</div>
+			</div>
+		</div>
+	</div>
+	<p class="show-score" id="show-score"><span class="dot">S</span>how-<span class="dot">s</span>core<span class="dot">...</span>
+	</p>
+	<div class="game-container hidden">
+		<div class="game-field">
+			<div class="cell" id="cell-1"></div>
+			<div class="cell" id="cell-2"></div>
+			<div class="cell" id="cell-3"></div>
+			<div class="cell" id="cell-4"></div>
+			<div class="cell" id="cell-5"></div>
+			<div class="cell" id="cell-6"></div>
+			<div class="cell" id="cell-7"></div>
+			<div class="cell" id="cell-8"></div>
+			<div class="cell" id="cell-9"></div>
+		</div>
+		<div class="win-message">
+			<p class="win-text" id="win-text"></p>
+			<button class="winBtn" id="continueBtn">Continue</button>
+			<button class="winBtn" id="endGameBtn">End Game</button>
+		</div>
+	</div>
+	<div class="players-score">
+		<div class="players-score-wrapper">
+<!--			<p class="timer"><span id="timer">5</span></p>-->
+			<div class="column">
+				<p class="name-score">Names:</p>
+				<ul class="players-list" id="players-list">
+					<li class="score-items-name"></li>
+				</ul>
+			</div>
+			<div class="column">
+				<p class="max-score">Score:</p>
+				<ul class="scores-list" id="scores-list">
+					<li class="score-items-score"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</main>
+<footer class="footer">
+<!--	<a class="link" href="https://rs.school/courses/javascript-preschool-ru" target="_blank"><i>RS School</i></a>-->
+	<p><i> created @2024 by Dmitriy</i></p>
+<!--	<a class="link" href="https://github.com/Stebeniev" target="_blank"><i>Dmitriy</i></a>-->
+</footer>
+<script src="script.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
